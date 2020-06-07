@@ -1,0 +1,272 @@
+/********** GENERALITES **********/
+/********** FONTS **********/
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Dancing+Script&family=Kaushan+Script&family=Pacifico&family=Parisienne&family=Roboto:wght@500&family=Satisfy&display=swap");
+/********** COLORS **********/
+/********** VARIABLES **********/
+/*          * PAGE ACCUEIL *          */
+header, aside button, footer {
+  background-color: #579C87;
+  color: #FDCB46;
+}
+
+/********** HEADER **********/
+header {
+  height: 120px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3em;
+  font-family: 'Roboto', sans-serif;
+}
+
+header h1 a {
+  text-decoration: none;
+  color: #FDCB46;
+  -webkit-animation-name: flash;
+          animation-name: flash;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+/********** ARTICLE **********/
+article {
+  margin-top: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+article section {
+  max-width: 660px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+article section div {
+  margin: 25px;
+  padding-top: 100px;
+  width: 270px;
+  height: 280px;
+  border: 1px solid transparent;
+  -webkit-box-shadow: 1px 1px 20px #95c4b6;
+          box-shadow: 1px 1px 20px #95c4b6;
+  border-radius: 2px;
+  text-align: center;
+}
+
+article section div a {
+  text-decoration: none;
+}
+
+/********** SECTION NOTE **********/
+.note {
+  background-color: #FCDFDB;
+  font-family: 'Caveat', cursive;
+  font-weight: bold;
+}
+
+.note p {
+  color: #3C1218;
+}
+
+.note_note {
+  margin-top: -5px;
+  font-size: 40px;
+}
+
+.note_note .fas {
+  background: -webkit-gradient(linear, left top, right bottom, from(#BE182C), to(#FFD3B5));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.note_baseline {
+  font-size: 25px;
+  margin-top: -40px;
+}
+
+.note_title {
+  text-transform: uppercase;
+  font-size: 35px;
+  margin-top: 0;
+}
+
+/********** SECTION CHIC *********/
+.chic {
+  background-color: #FFF5FE;
+  font-family: 'Satisfy', cursive;
+  color: #D8852E;
+}
+
+.chic_baseline {
+  font-size: 25px;
+  background: -webkit-gradient(linear, left bottom, right top, from(#D8852E), to(#925EFC));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.chic_title {
+  font-size: 35px;
+  margin-top: 0;
+}
+
+/********** SECTION DELICE *********/
+.delice {
+  background-color: #F9F9F9;
+  color: #0431DF;
+  font-family: 'Parisienne', cursive;
+}
+
+.delice_baseline {
+  font-size: 25px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#0431DF), to(#3D9FFA));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.delice_title {
+  font-size: 35px;
+  margin-top: 0;
+  font-family: 'Kaushan Script', cursive;
+}
+
+/********** SECTION PALETTE *********/
+.palette {
+  background-color: #FDFFFD;
+  color: #72BF56;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.palette_baseline {
+  font-size: 25px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#3D9339), to(#BFFF7E));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.palette_title {
+  font-size: 35px;
+  margin-top: 0;
+}
+
+/********** ASIDE **********/
+aside {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 120px;
+}
+
+aside button {
+  width: 300px;
+  height: 60px;
+  font-size: 35px;
+  border-radius: 10px;
+}
+
+aside button:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4, end) 1200ms infinite;
+          animation: ellipsis steps(4, end) 1200ms infinite;
+  content: "\2026";
+  width: 0px;
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
+}
+
+@keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
+}
+
+/********** FOOTER **********/
+footer {
+  height: 60px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  font-size: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 20px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #FDCB46;
+}
+
+footer .contact {
+  margin-right: 40px;
+}
+
+/*         * PAGE MENTIONS LEGALES *         */
+/********** ARTICLE **********/
+h3 {
+  font-size: 30px;
+}
+
+.text_mentions {
+  margin-bottom: 120px;
+  text-align: justify;
+  padding: 0 20px;
+}
+
+/*         * PAGE LA NOTE ENCHANTEE *         */
+/*# sourceMappingURL=base.css.map */

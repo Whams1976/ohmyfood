@@ -1,0 +1,222 @@
+/********** GENERALITES **********/
+
+@import "./layout";
+
+/*          * PAGE ACCUEIL *          */
+
+header, aside button, footer {
+    background-color: $firstcolor;
+    color: $secondcolor;
+}
+
+/********** HEADER **********/
+
+header {
+    height: $heightheader;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    & h1 {
+        font-size: 3em;
+        font-family: 'Roboto', sans-serif;
+        a {
+            text-decoration: none;
+            color: $secondcolor;
+            animation-name: flash;
+            animation-duration: 1s;
+            animation-fill-mode: both;
+        }
+        @keyframes flash {
+        0%, 50%, 100% {
+        opacity: 1;
+        }
+        25%, 75% {
+        opacity: 0;
+        }
+        }
+    }
+}
+
+/********** ARTICLE **********/
+
+article {
+    margin-top: $heightheader + 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    section {
+        max-width: 660px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        div {
+            margin: 25px;
+            padding-top: 100px;
+            width: 270px;
+            height: 280px;
+            border: 1px solid transparent;
+            box-shadow: 1px 1px 20px lighten($firstcolor, 20%);
+            border-radius: 2px;
+            text-align: center;
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+/********** SECTION NOTE **********/
+
+.note {
+    background-color: #FCDFDB;
+    font-family: 'Caveat', cursive;
+    font-weight: bold;
+    p {
+        color: #3C1218;
+    }
+    &_note {
+        margin-top: -5px;
+        font-size: 40px;
+        .fas {
+            background: -webkit-gradient(linear, left top, right bottom, from(#BE182C), to(#FFD3B5));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    &_baseline {
+        font-size: 25px;
+        margin-top: -40px;
+    }
+    &_title {
+        text-transform: uppercase;
+        font-size: 35px;
+        margin-top: 0;
+    }
+}
+
+/********** SECTION CHIC *********/
+
+.chic {
+    background-color: #FFF5FE;
+    font-family: 'Satisfy', cursive;
+    color: #D8852E;
+    &_baseline {
+        font-size: 25px;
+        background: -webkit-gradient(linear, left bottom, right top, from(#D8852E), to(#925EFC));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    &_title {
+        font-size: 35px;
+        margin-top: 0;
+    }
+}
+
+/********** SECTION DELICE *********/
+
+.delice {
+    background-color: #F9F9F9;
+    color: #0431DF;
+    font-family: 'Parisienne', cursive;
+    &_baseline {
+        font-size: 25px;
+        background: -webkit-gradient(linear, left top, right bottom, from(#0431DF), to(#3D9FFA));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    &_title {
+        font-size: 35px;
+        margin-top: 0;
+        font-family: 'Kaushan Script', cursive;
+    }
+}
+
+/********** SECTION PALETTE *********/
+
+.palette {
+    background-color: #FDFFFD;
+    color: #72BF56;
+    font-family: 'Kaushan Script', cursive;
+    &_baseline {
+        font-size: 25px;
+        background: -webkit-gradient(linear, left top, right bottom, from(#3D9339), to(#BFFF7E));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    &_title {
+        font-size: 35px;
+        margin-top: 0;
+    }
+}
+
+/********** ASIDE **********/
+
+aside {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: $heightheader;
+    button {
+        width: 300px;
+        height: 60px;
+        font-size: 35px;
+        border-radius: 10px;
+        &:after {
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: bottom;      
+            animation: ellipsis steps(4,end) 1200ms infinite;
+            content: "\2026";
+            width: 0px;
+        }
+        @keyframes ellipsis {
+            to {
+                width: 1.25em;    
+            }
+        }  
+    }
+}
+
+/********** FOOTER **********/
+
+footer {
+    height: $heightheader / 2;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    a {
+        text-decoration: none;
+        color: $secondcolor;
+    }
+    .contact {
+        margin-right: 40px;
+    }
+}
+
+/*         * PAGE MENTIONS LEGALES *         */
+
+/********** ARTICLE **********/
+
+h3 {
+    font-size: 30px;
+}
+.text_mentions {
+    margin-bottom: $heightheader;
+    text-align: justify;
+    padding: 0 20px;
+}
+
+/*         * PAGE LA NOTE ENCHANTEE *         */
+
