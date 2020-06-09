@@ -70,11 +70,11 @@ article {
 /********** SECTION NOTE **********/
 
 .note {
-    background-color: #FCDFDB;
+    background-color: $backnote;
     font-family: 'Caveat', cursive;
     font-weight: bold;
     p {
-        color: #3C1218;
+        color: $colornote;
     }
     &_note {
         margin-top: -5px;
@@ -100,12 +100,12 @@ article {
 /********** SECTION CHIC *********/
 
 .chic {
-    background-color: #FFF5FE;
+    background-color: $backchic;
     font-family: 'Satisfy', cursive;
-    color: #D8852E;
+    color: $colorchic;
     &_baseline {
         font-size: 25px;
-        background: -webkit-gradient(linear, left bottom, right top, from(#D8852E), to(#925EFC));
+        background: -webkit-gradient(linear, left bottom, right top, from($colorchic), to(#925EFC));
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -119,12 +119,12 @@ article {
 /********** SECTION DELICE *********/
 
 .delice {
-    background-color: #F9F9F9;
-    color: #0431DF;
+    background-color: $backdelice;
+    color: $colordelice;
     font-family: 'Parisienne', cursive;
     &_baseline {
         font-size: 25px;
-        background: -webkit-gradient(linear, left top, right bottom, from(#0431DF), to(#3D9FFA));
+        background: -webkit-gradient(linear, left top, right bottom, from($colordelice), to(#3D9FFA));
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -139,8 +139,8 @@ article {
 /********** SECTION PALETTE *********/
 
 .palette {
-    background-color: #FDFFFD;
-    color: #72BF56;
+    background-color: $backpalette;
+    color: $colorpalette;
     font-family: 'Kaushan Script', cursive;
     &_baseline {
         font-size: 25px;
@@ -218,10 +218,72 @@ h3 {
     padding: 0 20px;
 }
 
-/*         * PAGE LA NOTE ENCHANTEE *         */
+/*         * PAGES MENUS *         */
 
 .menu_title {
     font-size: 30px;
     font-weight: bold;
-    color: #3C1218;
+    color: $colornote;
+}
+.menu_content {
+    width: 660px;
+    margin-bottom: $heightheader;
+    background-color: $backnote;
+    padding: 30px;
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    border: 1px solid transparent;
+    box-shadow: 1px 1px 20px lighten($firstcolor, 20%);
+    border-radius: 2px;
+}
+h4 {
+    font-size: 24px;
+    margin-bottom: -10px;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    &::before,
+    &::after {
+    border-top: 3px solid;
+    content: "";
+    flex: 1;
+    margin: 0 60px;
+    }
+}
+h4 span {
+    text-decoration: none;
+    background: linear-gradient(to top, $colornote 0%, $colornote 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
+    transition: background-size .5s;
+    &:hover {
+        background-size: 100% 100%;
+    }
+}
+.baseline {
+    font-size: 30px;
+}
+.menu_mets {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 60px;
+    margin-top: -20px;
+    transition: transform 2s, opacity 2s ease-in-out;
+    opacity: 1;
+    &:hover {
+        transform: scale(1.3);
+        opacity: .7;
+    }
+}
+
+/********** PAGE MENU LA NOTE ENCHANTEE **********/
+
+.menu_back {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    .note_baseline {
+        padding: 40px 0 0 10px;
+        font-size: 30px;
+    }
 }

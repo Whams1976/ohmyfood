@@ -268,10 +268,107 @@ h3 {
   padding: 0 20px;
 }
 
-/*         * PAGE LA NOTE ENCHANTEE *         */
+/*         * PAGES MENUS *         */
 .menu_title {
   font-size: 30px;
   font-weight: bold;
   color: #3C1218;
+}
+
+.menu_content {
+  width: 660px;
+  margin-bottom: 120px;
+  background-color: #FCDFDB;
+  padding: 30px;
+  text-align: center;
+  font-family: 'Caveat', cursive;
+  border: 1px solid transparent;
+  -webkit-box-shadow: 1px 1px 20px #95c4b6;
+          box-shadow: 1px 1px 20px #95c4b6;
+  border-radius: 2px;
+}
+
+h4 {
+  font-size: 24px;
+  margin-bottom: -10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+h4::before, h4::after {
+  border-top: 3px solid;
+  content: "";
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 60px;
+}
+
+h4 span {
+  text-decoration: none;
+  background: -webkit-gradient(linear, left bottom, left top, from(#3C1218), color-stop(10%, #3C1218), color-stop(10.01%, transparent)) no-repeat left bottom/0 100%;
+  background: linear-gradient(to top, #3C1218 0%, #3C1218 10%, transparent 10.01%) no-repeat left bottom/0 100%;
+  -webkit-transition: background-size .5s;
+  transition: background-size .5s;
+}
+
+h4 span:hover {
+  background-size: 100% 100%;
+}
+
+.baseline {
+  font-size: 30px;
+}
+
+.menu_mets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 60px;
+  margin-top: -20px;
+  -webkit-transition: opacity 2s ease-in-out, -webkit-transform 2s;
+  transition: opacity 2s ease-in-out, -webkit-transform 2s;
+  transition: transform 2s, opacity 2s ease-in-out;
+  transition: transform 2s, opacity 2s ease-in-out, -webkit-transform 2s;
+  opacity: 1;
+}
+
+.menu_mets:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  opacity: .7;
+}
+
+/********** PAGE MENU LA NOTE ENCHANTEE **********/
+.menu_back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu_back .note_baseline {
+  padding: 40px 0 0 10px;
+  font-size: 30px;
 }
 /*# sourceMappingURL=base.css.map */
