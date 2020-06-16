@@ -98,7 +98,7 @@ article section div a {
 /********** SECTION NOTE **********/
 .note {
   background-color: #FCDFDB;
-  font-family: 'Caveat', cursive;
+  font-family: "Caveat", cursive;
   font-weight: bold;
 }
 
@@ -132,7 +132,7 @@ article section div a {
 /********** SECTION CHIC *********/
 .chic {
   background-color: #FFF5FE;
-  font-family: 'Satisfy', cursive;
+  font-family: "Satisfy", cursive;
   color: #D8852E;
 }
 
@@ -153,7 +153,7 @@ article section div a {
 .delice {
   background-color: #F9F9F9;
   color: #0431DF;
-  font-family: 'Parisienne', cursive;
+  font-family: "Parisienne";
 }
 
 .delice_baseline {
@@ -174,7 +174,7 @@ article section div a {
 .palette {
   background-color: #FDFFFD;
   color: #72BF56;
-  font-family: 'Kaushan Script', cursive;
+  font-family: "Kaushan Script";
 }
 
 .palette_baseline {
@@ -275,13 +275,11 @@ h3 {
   color: #3C1218;
 }
 
-.menu_content {
+.note_content, .chic_content, .delice_content, .palette_content {
   width: 660px;
   margin-bottom: 120px;
-  background-color: #FCDFDB;
   padding: 30px;
   text-align: center;
-  font-family: 'Caveat', cursive;
   border: 1px solid transparent;
   -webkit-box-shadow: 1px 1px 20px #95c4b6;
           box-shadow: 1px 1px 20px #95c4b6;
@@ -352,6 +350,11 @@ h4 span:hover {
 }
 
 /********** PAGE MENU LA NOTE ENCHANTEE **********/
+.note_content {
+  background-color: #FCDFDB;
+  font-family: "Caveat", cursive;
+}
+
 .menu_back {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -370,5 +373,11 @@ h4 span:hover {
 .menu_back .note_baseline {
   padding: 40px 0 0 10px;
   font-size: 30px;
+}
+
+/********** PAGE MENU LE CHIC A LA FRANCAISE **********/
+.chic_content {
+  background-color: #FFF5FE;
+  font-family: "Satisfy", cursive;
 }
 /*# sourceMappingURL=base.css.map */

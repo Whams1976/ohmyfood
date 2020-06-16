@@ -71,7 +71,7 @@ article {
 
 .note {
     background-color: $backnote;
-    font-family: 'Caveat', cursive;
+    font-family: $fontnote, cursive;
     font-weight: bold;
     p {
         color: $colornote;
@@ -101,7 +101,7 @@ article {
 
 .chic {
     background-color: $backchic;
-    font-family: 'Satisfy', cursive;
+    font-family: $fontchic, cursive;
     color: $colorchic;
     &_baseline {
         font-size: 25px;
@@ -121,7 +121,7 @@ article {
 .delice {
     background-color: $backdelice;
     color: $colordelice;
-    font-family: 'Parisienne', cursive;
+    font-family: $fontdelice;
     &_baseline {
         font-size: 25px;
         background: -webkit-gradient(linear, left top, right bottom, from($colordelice), to(#3D9FFA));
@@ -141,7 +141,7 @@ article {
 .palette {
     background-color: $backpalette;
     color: $colorpalette;
-    font-family: 'Kaushan Script', cursive;
+    font-family: $fontpalette;
     &_baseline {
         font-size: 25px;
         background: -webkit-gradient(linear, left top, right bottom, from(#3D9339), to(#BFFF7E));
@@ -225,13 +225,11 @@ h3 {
     font-weight: bold;
     color: $colornote;
 }
-.menu_content {
+.note_content, .chic_content, .delice_content, .palette_content {
     width: 660px;
     margin-bottom: $heightheader;
-    background-color: $backnote;
     padding: 30px;
     text-align: center;
-    font-family: 'Caveat', cursive;
     border: 1px solid transparent;
     box-shadow: 1px 1px 20px lighten($firstcolor, 20%);
     border-radius: 2px;
@@ -277,6 +275,10 @@ h4 span {
 
 /********** PAGE MENU LA NOTE ENCHANTEE **********/
 
+.note_content {
+    background-color: $backnote;
+    font-family: $fontnote, cursive;
+}
 .menu_back {
     display: flex;
     flex-direction: row;
@@ -286,4 +288,11 @@ h4 span {
         padding: 40px 0 0 10px;
         font-size: 30px;
     }
+}
+
+/********** PAGE MENU LE CHIC A LA FRANCAISE **********/
+
+.chic_content {
+    background-color: $backchic;
+    font-family: $fontchic, cursive;
 }
