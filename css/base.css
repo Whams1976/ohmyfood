@@ -147,6 +147,7 @@ article section div a {
 .chic_title {
   font-size: 35px;
   margin-top: 0;
+  color: #D8852E;
 }
 
 /********** SECTION DELICE *********/
@@ -167,6 +168,7 @@ article section div a {
 .delice_title {
   font-size: 35px;
   margin-top: 0;
+  color: #0431DF;
   font-family: 'Kaushan Script', cursive;
 }
 
@@ -188,6 +190,7 @@ article section div a {
 .palette_title {
   font-size: 35px;
   margin-top: 0;
+  color: #72BF56;
 }
 
 /********** ASIDE **********/
@@ -198,7 +201,7 @@ aside {
 }
 
 aside button {
-  width: 300px;
+  width: 320px;
   height: 60px;
   font-size: 35px;
   border-radius: 10px;
@@ -379,5 +382,100 @@ h4 span:hover {
 .chic_content {
   background-color: #FFF5FE;
   font-family: "Satisfy", cursive;
+}
+
+.chic_content .baseline {
+  background: -webkit-gradient(linear, left bottom, right top, from(#D8852E), to(#925EFC));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.chic_content .title_entree {
+  color: #D8852E;
+  text-decoration: none;
+  background: -webkit-gradient(linear, left bottom, left top, from(#D8852E), color-stop(10%, #D8852E), color-stop(10.01%, transparent)) no-repeat left bottom/0 100%;
+  background: linear-gradient(to top, #D8852E 0%, #D8852E 10%, transparent 10.01%) no-repeat left bottom/0 100%;
+  -webkit-transition: background-size .5s;
+  transition: background-size .5s;
+}
+
+.chic_content .title_entree:hover {
+  background-size: 100% 100%;
+}
+
+.chic_content .title_plat {
+  color: #C38396;
+  text-decoration: none;
+  background: -webkit-gradient(linear, left bottom, left top, from(#C38396), color-stop(10%, #C38396), color-stop(10.01%, transparent)) no-repeat left bottom/0 100%;
+  background: linear-gradient(to top, #C38396 0%, #C38396 10%, transparent 10.01%) no-repeat left bottom/0 100%;
+  -webkit-transition: background-size .5s;
+  transition: background-size .5s;
+}
+
+.chic_content .title_plat:hover {
+  background-size: 100% 100%;
+}
+
+.chic_content .title_dessert {
+  color: #925EFC;
+  text-decoration: none;
+  background: -webkit-gradient(linear, left bottom, left top, from(#925EFC), color-stop(10%, #925EFC), color-stop(10.01%, transparent)) no-repeat left bottom/0 100%;
+  background: linear-gradient(to top, #925EFC 0%, #925EFC 10%, transparent 10.01%) no-repeat left bottom/0 100%;
+  -webkit-transition: background-size .5s;
+  transition: background-size .5s;
+}
+
+.chic_content .title_dessert:hover {
+  background-size: 100% 100%;
+}
+
+/********** PAGE MENU LE DELICE DES PAPILLES **********/
+.delice_content .baseline {
+  font-size: 40px;
+  font-family: "Parisienne";
+  background: -webkit-gradient(linear, left top, right bottom, from(#0431DF), to(#3D9FFA));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.delice_p {
+  text-decoration: none;
+  font-family: "Parisienne";
+}
+
+.delice_titles {
+  text-decoration: none;
+  font-family: "Parisienne";
+  font-weight: normal;
+  font-size: 22px;
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(10%, black), color-stop(10.01%, transparent)) no-repeat left bottom/0 100%;
+  background: linear-gradient(to top, black 0%, black 10%, transparent 10.01%) no-repeat left bottom/0 100%;
+  -webkit-transition: background-size .5s;
+  transition: background-size .5s;
+}
+
+.delice_titles:hover {
+  background-size: 100% 100%;
+}
+
+/********** PAGE MENU LA PALETTE DU GOUT **********/
+.palette_content {
+  font-family: "Kaushan Script";
+  font-size: 14px;
+}
+
+.palette_content h4 {
+  font-size: 14px;
+}
+
+.palette_content .baseline {
+  font-family: "Kaushan Script";
+  font-size: 40px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#3D9339), to(#BFFF7E));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 /*# sourceMappingURL=base.css.map */
