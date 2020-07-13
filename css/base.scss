@@ -242,14 +242,8 @@ h4 {
     margin-bottom: -10px;
     align-items: center;
     display: flex;
+    justify-content: space-between;
     text-align: center;
-    &::before,
-    &::after {
-    border-top: 3px solid;
-    content: "";
-    flex: 1;
-    margin: 0 60px;
-    }
 }
 h4 span {
     text-decoration: none;
@@ -258,6 +252,10 @@ h4 span {
     &:hover {
         background-size: 100% 100%;
     }
+}
+h4 img {
+    height: 10px;
+    width: 200px;
 }
 .baseline {
     font-size: 30px;
@@ -363,9 +361,9 @@ h4 span {
 
 .palette_content {
     font-family: $fontpalette;
-    font-size: 14px;
+    font-size: 16px;
     h4 {
-        font-size: 14px;
+        font-size: 16px;
     }
     .baseline {
         font-family: $fontpalette;
