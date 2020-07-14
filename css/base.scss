@@ -2,7 +2,7 @@
 
 @import "./layout";
 
-/*          * PAGE ACCUEIL *          */
+/* ------ * PAGE ACCUEIL * ------ */
 
 header, aside button, footer {
     background-color: $firstcolor;
@@ -71,7 +71,7 @@ article {
 
 .note {
     background-color: $backnote;
-    font-family: 'Caveat', cursive;
+    font-family: $fontnote, cursive;
     font-weight: bold;
     p {
         color: $colornote;
@@ -101,7 +101,7 @@ article {
 
 .chic {
     background-color: $backchic;
-    font-family: 'Satisfy', cursive;
+    font-family: $fontchic, cursive;
     color: $colorchic;
     &_baseline {
         font-size: 25px;
@@ -113,6 +113,7 @@ article {
     &_title {
         font-size: 35px;
         margin-top: 0;
+        color: $colorchic;
     }
 }
 
@@ -121,7 +122,7 @@ article {
 .delice {
     background-color: $backdelice;
     color: $colordelice;
-    font-family: 'Parisienne', cursive;
+    font-family: $fontdelice;
     &_baseline {
         font-size: 25px;
         background: -webkit-gradient(linear, left top, right bottom, from($colordelice), to(#3D9FFA));
@@ -132,6 +133,7 @@ article {
     &_title {
         font-size: 35px;
         margin-top: 0;
+        color: $colordelice;
         font-family: 'Kaushan Script', cursive;
     }
 }
@@ -141,7 +143,7 @@ article {
 .palette {
     background-color: $backpalette;
     color: $colorpalette;
-    font-family: 'Kaushan Script', cursive;
+    font-family: $fontpalette;
     &_baseline {
         font-size: 25px;
         background: -webkit-gradient(linear, left top, right bottom, from(#3D9339), to(#BFFF7E));
@@ -152,25 +154,32 @@ article {
     &_title {
         font-size: 35px;
         margin-top: 0;
+        color: $colorpalette;
     }
 }
 
 /********** ASIDE **********/
 
 aside {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     margin-top: 25px;
     margin-bottom: $heightheader;
     button {
-        width: 300px;
+        width: 320px;
         height: 60px;
+        padding-left: 20px;
         font-size: 35px;
         border-radius: 10px;
+        display: flex;
+        align-items: center;
+    }
+    .petitspoints {
         &:after {
             overflow: hidden;
             display: inline-block;
             vertical-align: bottom;      
-            animation: ellipsis steps(4,end) 1200ms infinite;
+            animation: ellipsis steps(4,end) 1500ms infinite;
             content: "\2026";
             width: 0px;
         }
@@ -205,7 +214,7 @@ footer {
     }
 }
 
-/*         * PAGE MENTIONS LEGALES *         */
+/* ------ * PAGE MENTIONS LEGALES * ------ */
 
 /********** ARTICLE **********/
 
@@ -218,20 +227,18 @@ h3 {
     padding: 0 20px;
 }
 
-/*         * PAGES MENUS *         */
+/* ------ * PAGES MENUS * ------ */
 
 .menu_title {
     font-size: 30px;
     font-weight: bold;
     color: $colornote;
 }
-.menu_content {
+.note_content, .chic_content, .delice_content, .palette_content {
     width: 660px;
     margin-bottom: $heightheader;
-    background-color: $backnote;
     padding: 30px;
     text-align: center;
-    font-family: 'Caveat', cursive;
     border: 1px solid transparent;
     box-shadow: 1px 1px 20px lighten($firstcolor, 20%);
     border-radius: 2px;
@@ -241,14 +248,8 @@ h4 {
     margin-bottom: -10px;
     align-items: center;
     display: flex;
+    justify-content: space-between;
     text-align: center;
-    &::before,
-    &::after {
-    border-top: 3px solid;
-    content: "";
-    flex: 1;
-    margin: 0 60px;
-    }
 }
 h4 span {
     text-decoration: none;
@@ -257,6 +258,10 @@ h4 span {
     &:hover {
         background-size: 100% 100%;
     }
+}
+h4 img {
+    height: 10px;
+    width: 200px;
 }
 .baseline {
     font-size: 30px;
@@ -277,6 +282,10 @@ h4 span {
 
 /********** PAGE MENU LA NOTE ENCHANTEE **********/
 
+.note_content {
+    background-color: $backnote;
+    font-family: $fontnote, cursive;
+}
 .menu_back {
     display: flex;
     flex-direction: row;
@@ -285,5 +294,133 @@ h4 span {
     .note_baseline {
         padding: 40px 0 0 10px;
         font-size: 30px;
+    }
+}
+
+/********** PAGE MENU LE CHIC A LA FRANCAISE **********/
+
+.chic_content {
+    background-color: $backchic;
+    font-family: $fontchic, cursive;
+    .baseline {
+        background: -webkit-gradient(linear, left bottom, right top, from($colorchic), to(#925EFC));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .title_entree {
+        color: $colorchic;
+        text-decoration: none;
+        background: linear-gradient(to top, $colorchic 0%, $colorchic 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
+        transition: background-size .5s;
+        &:hover {
+            background-size: 100% 100%;
+        }
+    }
+    .title_plat {
+        color: #C38396;
+        text-decoration: none;
+        background: linear-gradient(to top, #C38396 0%, #C38396 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
+        transition: background-size .5s;
+        &:hover {
+            background-size: 100% 100%;
+        }
+    }
+    .title_dessert {
+        color: #925EFC;
+        text-decoration: none;
+        background: linear-gradient(to top, #925EFC 0%, #925EFC 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
+        transition: background-size .5s;
+        &:hover {
+            background-size: 100% 100%;
+        }
+    }
+}
+
+/********** PAGE MENU LE DELICE DES PAPILLES **********/
+
+.delice_content .baseline {
+    font-size: 40px;
+    font-family: $fontdelice;
+    background: -webkit-gradient(linear, left top, right bottom, from($colordelice), to(#3D9FFA));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+.delice_p {
+    text-decoration: none;
+    font-family: $fontdelice;
+    }
+.delice_titles {
+    text-decoration: none;
+    font-family: $fontdelice;
+    font-weight: normal;
+    font-size: 22px;
+    background: linear-gradient(to top, black 0%, black 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
+    transition: background-size .5s;
+    &:hover {
+        background-size: 100% 100%;
+    }
+}
+
+/********** PAGE MENU LA PALETTE DU GOUT **********/
+
+.palette_content {
+    font-family: $fontpalette;
+    font-size: 16px;
+    h4 {
+        font-size: 16px;
+    }
+    .baseline {
+        font-family: $fontpalette;
+        font-size: 40px;
+        background: -webkit-gradient(linear, left top, right bottom, from(#3D9339), to(#BFFF7E));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+/* ------ * MEDIAS * ------ */
+
+@media screen and (max-width: 800px) {
+    
+    header {
+        height: $heightheader / 2;
+        & h1 {
+            font-size: 2em;
+        }
+    }
+    article {
+        margin-top: $heightheader / 2;
+    }    
+    footer {
+        font-size: 20px;
+        height: $heightheader / 3;
+    }
+    .note_content, .chic_content, .delice_content, .palette_content {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 30px;
+        h4 {
+            display: flex;
+            flex-direction: column;
+        }
+        .menu_mets {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+            p {
+                margin: 0;
+                padding: 0;
+            }
+            transition: transform 2s, opacity 2s ease-in-out;
+            opacity: 1;
+            &:hover {
+                transform: scale(1.1);
+                opacity: .8;
+            }
+        }
     }
 }
