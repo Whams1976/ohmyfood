@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Dancing+Script&family=Kaushan+Script&family=Pacifico&family=Parisienne&family=Roboto:wght@500&family=Satisfy&display=swap");
 /********** COLORS **********/
 /********** VARIABLES **********/
-/*          * PAGE ACCUEIL *          */
+/* ------ * PAGE ACCUEIL * ------ */
 header, aside button, footer {
   background-color: #579C87;
   color: #FDCB46;
@@ -208,6 +208,7 @@ aside {
 aside button {
   width: 320px;
   height: 60px;
+  padding-left: 20px;
   font-size: 35px;
   border-radius: 10px;
   display: -webkit-box;
@@ -270,7 +271,7 @@ footer .contact {
   margin-right: 40px;
 }
 
-/*         * PAGE MENTIONS LEGALES *         */
+/* ------ * PAGE MENTIONS LEGALES * ------ */
 /********** ARTICLE **********/
 h3 {
   font-size: 30px;
@@ -282,7 +283,7 @@ h3 {
   padding: 0 20px;
 }
 
-/*         * PAGES MENUS *         */
+/* ------ * PAGES MENUS * ------ */
 .menu_title {
   font-size: 30px;
   font-weight: bold;
@@ -487,5 +488,61 @@ h4 img {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* ------ * MEDIAS * ------ */
+@media screen and (max-width: 800px) {
+  header {
+    height: 60px;
+  }
+  header h1 {
+    font-size: 2em;
+  }
+  article {
+    margin-top: 60px;
+  }
+  footer {
+    font-size: 20px;
+    height: 40px;
+  }
+  .note_content, .chic_content, .delice_content, .palette_content {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+  }
+  .note_content h4, .chic_content h4, .delice_content h4, .palette_content h4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .note_content .menu_mets, .chic_content .menu_mets, .delice_content .menu_mets, .palette_content .menu_mets {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    margin: 0;
+    -webkit-transition: opacity 2s ease-in-out, -webkit-transform 2s;
+    transition: opacity 2s ease-in-out, -webkit-transform 2s;
+    transition: transform 2s, opacity 2s ease-in-out;
+    transition: transform 2s, opacity 2s ease-in-out, -webkit-transform 2s;
+    opacity: 1;
+  }
+  .note_content .menu_mets p, .chic_content .menu_mets p, .delice_content .menu_mets p, .palette_content .menu_mets p {
+    margin: 0;
+    padding: 0;
+  }
+  .note_content .menu_mets:hover, .chic_content .menu_mets:hover, .delice_content .menu_mets:hover, .palette_content .menu_mets:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: .8;
+  }
 }
 /*# sourceMappingURL=base.css.map */
