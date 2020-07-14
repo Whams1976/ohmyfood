@@ -195,7 +195,12 @@ article section div a {
 
 /********** ASIDE **********/
 aside {
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 25px;
   margin-bottom: 120px;
 }
@@ -205,14 +210,20 @@ aside button {
   height: 60px;
   font-size: 35px;
   border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-aside button:after {
+aside .petitspoints:after {
   overflow: hidden;
   display: inline-block;
   vertical-align: bottom;
-  -webkit-animation: ellipsis steps(4, end) 1200ms infinite;
-          animation: ellipsis steps(4, end) 1200ms infinite;
+  -webkit-animation: ellipsis steps(4, end) 1500ms infinite;
+          animation: ellipsis steps(4, end) 1500ms infinite;
   content: "\2026";
   width: 0px;
 }

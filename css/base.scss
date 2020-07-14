@@ -161,7 +161,8 @@ article {
 /********** ASIDE **********/
 
 aside {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     margin-top: 25px;
     margin-bottom: $heightheader;
     button {
@@ -169,11 +170,15 @@ aside {
         height: 60px;
         font-size: 35px;
         border-radius: 10px;
+        display: flex;
+        align-items: center;
+    }
+    .petitspoints {
         &:after {
             overflow: hidden;
             display: inline-block;
             vertical-align: bottom;      
-            animation: ellipsis steps(4,end) 1200ms infinite;
+            animation: ellipsis steps(4,end) 1500ms infinite;
             content: "\2026";
             width: 0px;
         }
